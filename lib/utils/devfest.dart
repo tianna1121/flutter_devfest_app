@@ -11,6 +11,10 @@ class Devfest {
   static const String google_sans_family = "GoogleSans";
   static bool isDebugMode = true;
 
+  // * Images
+  static const String banner_light = "assets/images/banner_light.png";
+  static const String banner_dark = "assets/images/banner_dark.png";
+
   // * Preferences
   static SharedPreferences prefs;
   static const String darkModePref = "darkModePref";

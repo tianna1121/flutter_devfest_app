@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_devfest/config/config_bloc.dart';
+import 'package:flutter_devfest/home/home_page.dart';
 import 'package:flutter_devfest/utils/devfest.dart';
 
 import 'index.dart';
@@ -53,12 +54,7 @@ class _ConfigPageState extends State<ConfigPage> {
                 elevation: 0.0,
               ),
             ),
-            home: Scaffold(
-              appBar: AppBar(
-                title: Text("Devfest"),
-              ),
-              body: Container(),
-            ),
+            home: HomePage(),
           );
         },
       ),

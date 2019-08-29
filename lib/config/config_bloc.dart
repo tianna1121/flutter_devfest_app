@@ -19,6 +19,12 @@ class ConfigBloc extends Bloc<ConfigEvent, ConfigState> {
   Stream<ConfigState> mapEventToState(
     ConfigEvent event,
   ) async* {
-    // TODO: implement mapEventToState
+    try {
+      yield UnConfigState();
+      yield await event.applyAsync(currentState: currentState, bloc: this);
+    } catch (_, stackTrace) {
+      print('$_ $stackTrace');
+      yield currentState;
+    }
   }
 }
